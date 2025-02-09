@@ -2,13 +2,19 @@ package com.bigdata.bricks.order;
 
 import com.bigdata.bricks.discount.DiscountPolicy;
 import com.bigdata.bricks.discount.FixDiscountPolicy;
+import com.bigdata.bricks.discount.RateDiscountPolicy;
 import com.bigdata.bricks.member.Member;
 import com.bigdata.bricks.member.MemberRepository;
 import com.bigdata.bricks.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
 
     @Override

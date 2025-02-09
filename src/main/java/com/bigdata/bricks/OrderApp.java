@@ -10,8 +10,8 @@ import com.bigdata.bricks.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        MemberService memberService = new AppConfig().memberService();
+        OrderService orderService = new AppConfig().orderService();
         long memberId = 1L;
         Member member = new Member(memberId, "실험체1", Grade.VIP);
         memberService.join(member);

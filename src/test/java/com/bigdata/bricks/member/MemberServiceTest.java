@@ -1,10 +1,18 @@
 package com.bigdata.bricks.member;
 
+import com.bigdata.bricks.AppConfig;
+import com.bigdata.bricks.order.OrderService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+//    AppConfig appConfig = new AppConfig();
+//    MemberService memberService = appConfig.memberService();
+    ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+    MemberService memberService = ac.getBean("memberService", MemberService.class);
+
 
     @Test
     void 회원가입() {
