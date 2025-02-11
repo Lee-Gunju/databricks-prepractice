@@ -2,7 +2,9 @@ package com.bigdata.bricks.discount;
 
 import com.bigdata.bricks.member.Grade;
 import com.bigdata.bricks.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountPercent = 10;
 

@@ -6,7 +6,9 @@ import com.bigdata.bricks.discount.RateDiscountPolicy;
 import com.bigdata.bricks.member.Member;
 import com.bigdata.bricks.member.MemberRepository;
 import com.bigdata.bricks.member.MemoryMemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;

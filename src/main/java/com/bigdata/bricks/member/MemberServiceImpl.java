@@ -1,5 +1,8 @@
 package com.bigdata.bricks.member;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService {
     private final MemberRepository memberRepository;
 
