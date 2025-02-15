@@ -1,6 +1,7 @@
 package com.bigdata.bricks.singleton;
 
 import com.bigdata.bricks.AppConfig;
+import com.bigdata.bricks.AutoAppConfig;
 import com.bigdata.bricks.member.MemberRepository;
 import com.bigdata.bricks.member.MemberService;
 import com.bigdata.bricks.member.MemberServiceImpl;
@@ -71,6 +72,6 @@ public class SingletonTest {
 
 
     }
-
+    
 
 }
